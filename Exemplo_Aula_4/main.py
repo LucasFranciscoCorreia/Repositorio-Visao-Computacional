@@ -27,11 +27,11 @@ def imshow_fun(title):
         cap2[cap2 >= 255] = 255
         cap2 = cap2.astype(np.uint8)
         cv2.imshow(title, cap2)
-        cv2.imshow("original", cap)
+        #cv2.imshow("original", cap)
         if cv2.waitKey(1) == 27:
             break
 
-videocapture = cv2.VideoCapture(-1)
+videocapture = cv2.VideoCapture("http://192.168.15.2:8080/video")
 
-imshow_for("for")
-# imshow_fun("fun")
+#imshow_for("for")
+imshow_fun("fun")
